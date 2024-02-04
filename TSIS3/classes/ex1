@@ -1,0 +1,11 @@
+class StringManipulator:
+    def __init__(self):
+        self.input_string = ""
+    def get_string(self):
+        self.input_string = input("Type a string: ")
+    def print_uppercase(self):
+        print("string in uppercase:", self.input_string.upper())
+
+manipulator = StringManipulator()
+manipulator.get_string()
+manipulator.print_uppercase()

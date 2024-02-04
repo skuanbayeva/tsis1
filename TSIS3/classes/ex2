@@ -1,0 +1,15 @@
+class Shape:
+    def __init__(self):
+        pass  
+    def area(self):
+        print("Area of the shape: 0")
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+    def area(self):
+        print(f"Area of the square: {self.length ** 2}")
+
+side_length = float(input("Enter the length of the square side: "))
+my_square = Square(length=side_length)
+my_square.area()
