@@ -1,0 +1,25 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+def filter_prime(numbers):
+    prime_numbers = []
+    for num in numbers:
+        if is_prime(num):
+            prime_numbers.append(num)
+    return prime_numbers
+
+from my_functions import is_prime, filter_prime
+number_to_check = int(input("Enter a number to check for primality: "))
+if is_prime(number_to_check):
+    print(f"{number_to_check} is a prime number.")
+else:
+    print(f"{number_to_check} is not a prime number.")
+
+numbers_str = input("Enter a list of numbers separated by spaces: ")
+numbers_list = [int(x) for x in numbers_str.split()]
+prime_result = filter_prime(numbers_list)
+print("Prime numbers in the list:", prime_result)

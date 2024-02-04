@@ -1,0 +1,8 @@
+name = input("Enter your name: ")
+print("Hello, " + name + "!")
+age = input("Enter your age: ")
+age = int(age)
+if age >= 18:
+    print(name + ", you are old enough to vote!")
+else:
+    print(name + ", you are not yet old enough to vote. Wait a few more years!")
