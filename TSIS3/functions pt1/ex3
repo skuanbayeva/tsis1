@@ -1,0 +1,18 @@
+def solve(numheads, numlegs):
+    if numheads < 0 or numlegs < 0 or numheads > numlegs:
+        print("Invalid input. Please provide a valid number of heads and legs.")
+        return None
+    num_rabbits = (numlegs - (2 * numheads)) / 2
+    num_chickens = numheads - num_rabbits
+    if num_rabbits.is_integer() and num_chickens.is_integer():
+        return int(num_chickens), int(num_rabbits)
+    else:
+        print("No solution found.")
+        return None
+
+numheads = int(input("Enter the number of heads: "))
+numlegs = int(input("Enter the number of legs: "))
+result = solve(numheads, numlegs)
+if result:
+    chickens, rabbits = result
+    print(f"The farm has {chickens} chickens and {rabbits} rabbits.")

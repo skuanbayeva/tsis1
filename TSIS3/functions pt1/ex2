@@ -1,0 +1,3 @@
+fahrenheit = float(input("Enter the temperature in Fahrenheit: "))
+centigrade = (5 / 9) * (fahrenheit - 32)
+print(f"{fahrenheit} degrees Fahrenheit is approximately {centigrade:.2f} degrees Centigrade.")
