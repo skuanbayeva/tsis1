@@ -1,0 +1,14 @@
+def calculate_parallelogram_area(base_length, height):
+    area = base_length * height
+    return area
+def main():
+    try:
+        base_length = float(input("Length of base: "))
+        height = float(input("Height of parallelogram: "))
+        area = calculate_parallelogram_area(base_length, height)
+        print("Expected Output:", area)
+    except ValueError:
+        print("Invalid input. Please enter valid numbers.")
+
+if __name__ == "__main__":
+    main()
