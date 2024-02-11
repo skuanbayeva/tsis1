@@ -1,0 +1,17 @@
+def countdown(n):
+    while n >= 0:
+        yield n
+        n -= 1
+
+def main():
+    try:
+        n = int(input("Enter a number (n): "))
+
+        print("Counting down from", n, "to 0:")
+        for number in countdown(n):
+            print(number, end=", ")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()

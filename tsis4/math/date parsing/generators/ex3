@@ -1,0 +1,23 @@
+def divisible_by_three_and_four(n):
+    divisible_nums = []
+    for num in range(n + 1):
+        if num % 3 == 0 and num % 4 == 0:
+            divisible_nums.append(num)
+    return divisible_nums
+
+def main():
+    try:
+        n = int(input("Enter a number (n): "))
+        if n < 0:
+            print("Please enter a positive number.")
+            return
+        
+        divisible_nums = divisible_by_three_and_four(n)
+        print(f"Numbers divisible by 3 and 4 between 0 and {n}:")
+        for num in divisible_nums:
+            print(num, end=", ")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()

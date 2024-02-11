@@ -1,0 +1,27 @@
+def generate_even_numbers(n):
+    even_numbers = []
+    for num in range(n + 1):
+        if num % 2 == 0:
+            even_numbers.append(num)
+    return even_numbers
+
+def main():
+    try:
+        n = int(input("Enter a number (n): "))
+        if n < 0:
+            print("Please enter a positive number.")
+            return
+        
+        even_numbers = generate_even_numbers(n)
+        print("Even numbers between 0 and", n, ":", end=" ")
+        for i in range(len(even_numbers)):
+            if i < len(even_numbers) - 1:
+                print(even_numbers[i], end=", ")
+            else:
+                print(even_numbers[i], end="")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()
+
