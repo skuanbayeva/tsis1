@@ -1,0 +1,10 @@
+import re
+
+def match_zero_or_more_b():
+    with open('row.txt', 'r') as file:
+        data = file.read()
+        pattern = re.compile(r'ab*')
+        matches = pattern.findall(data)
+        return matches
+
+print("Task 1:", match_zero_or_more_b())

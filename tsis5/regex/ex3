@@ -1,0 +1,10 @@
+import re
+
+def find_lowercase_sequences_with_underscore():
+    with open('row.txt', 'r') as file:
+        data = file.read()
+        pattern = re.compile(r'[a-z]+_[a-z]+')
+        matches = pattern.findall(data)
+        return matches
+    
+print("Task 3:", find_lowercase_sequences_with_underscore())
