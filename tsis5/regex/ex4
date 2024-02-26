@@ -1,7 +1,7 @@
 import re
 
 def find_uppercase_followed_by_lowercase():
-    with open('row.txt', 'r') as file:
+    with open(r'C:\Users\User\Desktop\row.txt', 'r', encoding='utf-8') as file:
         data = file.read()
         pattern = re.compile(r'[A-Z][a-z]+')
         matches = pattern.findall(data)

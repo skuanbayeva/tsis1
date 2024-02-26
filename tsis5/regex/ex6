@@ -1,9 +1,10 @@
 import re
 
 def replace_space_comma_dot_with_colon():
-    with open('row.txt', 'r') as file:
+    with open(r'C:\Users\User\Desktop\row.txt', 'r', encoding='utf-8') as file:
         data = file.read()
         modified_data = re.sub(r'[ ,.]', ':', data)
         return modified_data
     
 print("Task 6:", replace_space_comma_dot_with_colon())
+
