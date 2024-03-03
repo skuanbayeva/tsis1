@@ -1,0 +1,19 @@
+import os
+
+def analyze_path(path):
+    if os.path.exists(path):
+        filename = os.path.basename(path)
+        directory = os.path.dirname(path)
+        return (filename, directory)
+    else:
+        return "Path does not exist."
+
+path = input("Enter the path to analyze: ")
+analysis_result = analyze_path(path)
+if isinstance(analysis_result, tuple):
+    filename, directory = analysis_result
+    print(f"Path: {path}")
+    print(f"Filename: {filename}")
+    print(f"Directory: {directory}")
+else:
+    print(analysis_result)

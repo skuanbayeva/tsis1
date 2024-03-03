@@ -1,0 +1,8 @@
+def count_lines(filename):
+    with open(filename, 'r') as file:
+        line_count = sum(1 for line in file)
+    return line_count
+
+filename = input("Enter the path to the text file: ")
+num_lines = count_lines(filename)
+print(f"Number of lines in {filename}: {num_lines}")
