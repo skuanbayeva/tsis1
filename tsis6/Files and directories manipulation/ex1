@@ -1,17 +1,4 @@
 import os
 
-def list_directories_and_files(path):
-    directories = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
-    files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
-    all_directories = [os.path.join(dp, f) for dp, dn, filenames in os.walk(path) for f in dn]
-    all_files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(path) for f in filenames]
-    print("Directories:")
-    print(directories)
-    print("\nFiles:")
-    print(files)
-    print("\nAll Directories:")
-    print(all_directories)
-    print("\nAll Files:")
-    print(all_files)
+print(os.listdir(r"C:\Users\User\Desktop\git\tsis1"))
 
-list_directories_and_files("C:/Users/User/Desktop")

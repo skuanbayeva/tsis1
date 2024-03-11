@@ -1,16 +1,15 @@
 import json
 
-with open('sample-data.json', 'r') as file:
+with open(r'C:\Users\User\Desktop\sample-data.json', 'r') as file:
     data = json.load(file)
 
 def print_interface_status(data):
     print("Interface Status")
-    print("=" * 73)
     print("{:<70} {:<15} {:<7} {:<5}".format("DN", "Description", "Speed", "MTU"))
     print("-" * 73)
     for item in data['imdata']:
-        attributes = item['fvCEp']['attributes']
-        dn = attributes['dn']
+        attributes = item.get('fvCEp', {}).get('attributes', {})
+        dn = attributes.get('dn', 'unknown')
         description = attributes.get('descr', 'inherit')
         speed = attributes.get('speed', 'inherit')
         mtu = attributes.get('mtu', '')
