@@ -2,14 +2,10 @@ def calculate_trapezoid_area(height, base1, base2):
     area = 0.5 * (base1 + base2) * height
     return area
 def main():
-    try:
         height = float(input("Height: "))
         base1 = float(input("Base, first value: "))
         base2 = float(input("Base, second value: "))
         area = calculate_trapezoid_area(height, base1, base2)
         print("Expected Output:", area)
-    except ValueError:
-        print("Invalid input. Please enter valid numbers.")
 
-if __name__ == "__main__":
-    main()
+main()
