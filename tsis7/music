@@ -8,14 +8,18 @@ SCREEN_HEIGHT = 600
 BG_COLOR = (255, 255, 255)
 FONT_SIZE = 35
 FONT_COLOR = (0, 0, 0)
-MUSIC_FILES = ["music1.mp3", "music2.mp3", "music3.mp3"]
+MUSIC_FILES = [
+    r'C:\Users\User\Desktop\git\tsis1\tsis7\music1.mp3',
+    r'C:\Users\User\Desktop\git\tsis1\tsis7\music2.mp3',
+    r'C:\Users\User\Desktop\git\tsis1\tsis7\music3.mp3'
+]
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 font = pygame.font.Font(None, FONT_SIZE)
 
 pygame.mixer.music.load(MUSIC_FILES[0])
 
-# Define helper functions
+#helper functions
 def play_music():
     pygame.mixer.music.play()
 
